@@ -1,5 +1,5 @@
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
-.ibg{background-position: center;background-size: cover;background-repeat: no-repeat;
+.ibg{background-position: center;background-size: auto;background-repeat: no-repeat;
 	img{display: none;}
 }
 //====================================================================================================
@@ -16,13 +16,32 @@
 	.slick-track{position: relative;width: 100%;}
 	.slick-slide{overflow: hidden;float: left;position: relative;}
 	.slick-dots{
+		display: flex;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 20px;
 		li{
-			button{}
+			margin-right: 7px;
+			&:last-child{
+				margin-right: 0;
+			}
+			button{
+				width: 7px;
+				height: 7px;
+				background: rgb(129, 127, 127);
+				border-radius: 50%;
+				font-size: 0;
+			}
 			&.slick-active{
-				button{}
+				button{
+					background: #3e414b;
+				}
 			}
 		}
 	}
+
+
 }
 //=====================================================================================================================
 .tab__item{display: none;

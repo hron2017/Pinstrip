@@ -2,10 +2,10 @@
 //====================  Mobile Menu ========================//
 $('.header-menu__icon').click(function (event) {
 	$(this).toggleClass('active');
-	$('.header-menu__mobile').toggleClass('active');
+	$('.header-menu').toggleClass('active');
 });
 
-
+/*
 $(window).resize(function (event) {
 	adaptive_function();
 });
@@ -28,4 +28,4 @@ function adaptive_function() {
 	var h = $(window).outerHeight();
 	adaptive_header(w, h);
 }
-adaptive_function();
+adaptive_function();*/

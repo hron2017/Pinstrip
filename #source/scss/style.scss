@@ -70,20 +70,36 @@
 //</МИКСИНЫ>===============================================================================================
 
 //<ШРИФТЫ>===============================================================================================
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Roman.woff") format("woff"),
+    url("../fonts/HelveticaNeueCyr-Roman.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: "HelveticaNeueCyr";
+  src: url("../fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("../fonts/HelveticaNeueCyr-Bold.woff") format("woff"),
+    url("../fonts/HelveticaNeueCyr-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 //<Подключаем шрифты>=======================================================================================
 
 //</Подключаем шрифты>=======================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontfamily: "";
+$fontfamily: "HelveticaNeueCyr";
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
 
 //<ПЕРЕМЕННЫЕ>===========================================================================================================
 $minwidth: 320px;
-$mw: 1330;
+$mw: 990;
 $md1: $mw + 12;
 $md2: 992.98;
 $md3: 767.98;
@@ -132,6 +148,7 @@ body {
   font-size: 100%;
   line-height: 1;
   font-size: 14px;
+  font-weight: normal;
   font-family: $fontfamily;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -195,6 +212,7 @@ h6 {
 //</ОБОЛОЧКА>===========================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
+
 .container {
   max-width: $mw + px;
   margin: 0 auto;
@@ -212,10 +230,50 @@ h6 {
     padding: 0 10px;
   }
 }
+.container-big {
+  max-width: 1110px;
+}
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+.page {
+  height: 100%;
+  width: 100%;
+  background-image: url(../img/background.png);
+  /* background-size: auto;
+  background-position: center;
+  background-repeat: repeat;
+  background-image: radial-gradient(#383b47, #24262d);*/
+}
+.title {
+  color: #ffffff;
+  font-family: "Helvetica";
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-block;
+  position: absolute;
+  bottom: 120px;
+  padding-bottom: 26px;
+  z-index: 3;
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 13px;
+    opacity: 0.3;
+    background-color: #202128;
+  }
+  span {
+    color: #bec3cc;
+    font-weight: 400;
+  }
 
+  @media (max-width: $md3+px) {
+    font-size: 14px;
+  }
+}
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 @import "_vars";
@@ -223,6 +281,10 @@ h6 {
 @import "blocks/_forms";
 @import "blocks/_btn";
 
-
 @import "blocks/_header";
+
+@import "blocks/_main";
+@import "blocks/_slider";
+@import "blocks/_news";
+
 @import "blocks/_footer";

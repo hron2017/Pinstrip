@@ -1,0 +1,63 @@
+.section-sl {
+  padding: 42px 0;
+  background-color: #262830; }
+
+.section .slick-list {
+  text-align: center; }
+
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0px 65px;
+  position: relative; }
+  .slider-item {
+    position: relative; }
+    .slider-item:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 2px;
+      background-color: #3c3f44;
+      opacity: 0.4; }
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 0;
+  width: 35px;
+  height: 35px;
+  -webkit-box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, 0.2);
+  border: 4px solid rgba(17, 17, 17, 0.33);
+  background-color: #3c3f44;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.slick-next {
+  right: 0;
+  background-image: url(../img/rim/arrow_next.png);
+  background-position: center;
+  background-repeat: no-repeat; }
+
+.slick-prev {
+  left: 0;
+  background-image: url(../img/rim/arrow_prev.png);
+  background-position: center;
+  background-repeat: no-repeat; }
